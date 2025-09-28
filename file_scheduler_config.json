@@ -1,0 +1,21 @@
+{
+  "source_path": "C:/Users/Rishabh.Sonkar/Downloads/ftpTest",
+  "network_path": "172.31.18.136",
+  "network_user": "ftp_user1",
+  "network_pass": "dummy",
+  "destination_path": "Z:/upload",
+  "operation_type": "copy",
+  "schedule_time": "11:30",
+  "schedule_frequency": "daily",
+  "use_date_folders": true,
+  "date_format": "YYYY-MM-DD",
+  "date_folder_type": "current",
+  "custom_date": "2025-09-24",
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": "587",
+  "sender_email": "",
+  "sender_password": "",
+  "recipient_email": "",
+  "use_tls": true,
+  "task_name": "FileScheduler_Task"
+}
