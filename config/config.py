@@ -1,7 +1,7 @@
-
 import os
 import json
 from datetime import datetime
+import subprocess
 
 try:
     from tkinter import messagebox
@@ -11,6 +11,10 @@ except ImportError:
 def save_config(self):
         """Save configuration to file"""
         config = {
+            'network_path': self.network_path.get(),
+            'network_user': self.network_user.get(),
+            'network_pass': self.network_pass.get(),
+            'network_drive': self.network_drive.get(),
             'source_path': self.source_path.get() if self.gui_mode else self.config.get('source_path', ''),
             'destination_path': self.destination_path.get() if self.gui_mode else self.config.get('destination_path', ''),
             'operation_type': self.operation_type.get() if self.gui_mode else self.config.get('operation_type', 'copy'),
@@ -28,6 +32,7 @@ def save_config(self):
             'use_tls': self.use_tls.get() if self.gui_mode else self.config.get('use_tls', True),
             'task_name': self.task_name.get() if self.gui_mode else self.config.get('task_name', 'FileScheduler_Task')
         }
+        
         
         try:
             config_path = os.path.join(self.script_dir, self.config_file)
@@ -54,6 +59,11 @@ def load_config(self):
             config = json.load(f)
         
         if self.gui_mode:
+            # Load network share configuration
+            self.network_path.set(config.get('network_path', ''))
+            self.network_user.set(config.get('network_user', ''))
+            self.network_pass.set(config.get('network_pass', ''))
+            self.network_drive.set(config.get('network_drive', 'Z'))
             self.source_path.set(config.get('source_path', ''))
             self.destination_path.set(config.get('destination_path', ''))
             self.operation_type.set(config.get('operation_type', 'copy'))
@@ -106,3 +116,22 @@ def on_closing(self):
     
     if self.gui_mode:
         self.root.destroy()
+
+def map_network_drive(drive_letter, network_path, username, password):
+
+    # Disconnect previous mappings
+    subprocess.run(['net', 'use', f'{drive_letter}:', '/delete'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(['net', 'use', f'\\\\{network_path}', '/delete'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    cmd = [
+        'net', 'use',f'{drive_letter}:',f'\\\\{network_path}\\share',
+        f'/user:{username}',f'{password}'
+    ]
+    # net use Z: \\172.31.18.136\share /user:ftp_user1 Welcome@123!
+    # print("Running command:", ' '.join(cmd))
+
+    result = subprocess.run(cmd, shell=False)
+    return result.returncode == 0
+
+def unmap_network_drive(drive_letter):
+    subprocess.run(['net', 'use', f'{drive_letter}:', '/delete'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

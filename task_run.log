@@ -1,0 +1,115 @@
+Starting File Scheduler in batch mode...
+Database initialized at: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\database\file_scheduler_log.db
+Configuration loaded from: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\file_scheduler_config.json
+Running command: net use Z: \\172.31.18.136\share /user:ftp_user1 Welcome@123!
+DB connection opened in thread
+[BATCH] Exception: Operation failed: 'str' object has no attribute 'get'
+[BATCH] Log entry created: ERROR - Operation failed: 'str' object has no attribute 'get'
+[BATCH] Email not configured, skipping notification
+DB connection closed in thread
+Batch operation failed
+The command completed successfully.
+
+Starting File Scheduler in batch mode...
+Database initialized at: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\database\file_scheduler_log.db
+Configuration loaded from: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\file_scheduler_config.json
+Running command: net use Z: \\172.31.18.136\share /user:ftp_user1 Welcome@123!
+DB connection opened in thread
+[BATCH] Starting file operation: copy
+[BATCH] Source: C:/Users/Rishabh.Sonkar/Downloads/ftpTest
+[BATCH] Base destination: Z:/upload
+[BATCH] Date folder: 2025-10-06
+[BATCH] Final destination: Z:/upload\2025-10-06
+[BATCH] Created destination directory
+[BATCH] Found 13 files to process
+[BATCH] Processed 10 files...
+[BATCH] Success: Copy operation completed to date folder '2025-10-06'
+[BATCH] Processed 13 files in 19.84 seconds
+[BATCH] Log entry created: SUCCESS - Copy operation completed to date folder '2025-10-06'
+[BATCH] Email not configured, skipping notification
+DB connection closed in thread
+Batch operation completed successfully
+The command completed successfully.
+
+Starting File Scheduler in batch mode...
+Database initialized at: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\database\file_scheduler_log.db
+Configuration loaded from: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\file_scheduler_config.json
+Running command: net use Z: \\172.31.18.136\share /user:ftp_user1 Welcome@123!
+DB connection opened in thread
+[BATCH] Starting file operation: copy
+[BATCH] Source: C:/Users/Rishabh.Sonkar/Downloads/ftpTest
+[BATCH] Base destination: Z:/upload
+[BATCH] Date folder: 2025-10-06
+[BATCH] Final destination: Z:/upload\2025-10-06
+[BATCH] Created destination directory
+[BATCH] Found 13 files to process
+[BATCH] Processed 10 files...
+[BATCH] Success: Copy operation completed to date folder '2025-10-06'
+[BATCH] Processed 13 files in 25.36 seconds
+[BATCH] Log entry created: SUCCESS - Copy operation completed to date folder '2025-10-06'
+[BATCH] Email not configured, skipping notification
+DB connection closed in thread
+Batch operation completed successfully
+The command completed successfully.
+
+Starting File Scheduler in batch mode...
+Database initialized at: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\database\file_scheduler_log.db
+Configuration loaded from: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\file_scheduler_config.json
+Running command: net use Z: \\172.31.18.136\share /user:ftp_user1 Welcome@123!
+DB connection opened in thread
+[BATCH] Starting file operation: copy
+[BATCH] Source: C:/Users/Rishabh.Sonkar/Downloads/ftpTest
+[BATCH] Base destination: Z:/upload
+[BATCH] Date folder: 2025-10-06
+[BATCH] Final destination: Z:/upload\2025-10-06
+[BATCH] Created destination directory
+[BATCH] Found 13 files to process
+[BATCH] Processed 10 files...
+[BATCH] Success: Copy operation completed to date folder '2025-10-06'
+[BATCH] Processed 13 files in 21.89 seconds
+[BATCH] Log entry created: SUCCESS - Copy operation completed to date folder '2025-10-06'
+[BATCH] Email not configured, skipping notification
+DB connection closed in thread
+Batch operation completed successfully
+The command completed successfully.
+
+Starting File Scheduler in batch mode...
+Database initialized at: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\database\file_scheduler_log.db
+Configuration loaded from: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\file_scheduler_config.json
+Running command: net use Z: \\172.31.18.136\share /user:ftp_user1 Welcome@123!
+DB connection opened in thread
+[BATCH] Starting file operation: copy
+[BATCH] Source: C:/Users/Rishabh.Sonkar/Downloads/ftpTest
+[BATCH] Base destination: Z:/upload
+[BATCH] Date folder: 2025-10-06
+[BATCH] Final destination: Z:/upload\2025-10-06
+[BATCH] Created destination directory
+[BATCH] Found 13 files to process
+[BATCH] Processed 10 files...
+[BATCH] Success: Copy operation completed to date folder '2025-10-06'
+[BATCH] Processed 13 files in 21.31 seconds
+[BATCH] Log entry created: SUCCESS - Copy operation completed to date folder '2025-10-06'
+[BATCH] Email not configured, skipping notification
+DB connection closed in thread
+Batch operation completed successfully
+The command completed successfully.
+
+Starting File Scheduler in batch mode...
+Database initialized at: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\database\file_scheduler_log.db
+Configuration loaded from: C:\Users\Rishabh.Sonkar\Desktop\FileCopier\file_scheduler_config.json
+Running command: net use Z: \\172.31.18.136\share /user:ftp_user1 Welcome@123!
+DB connection opened in thread
+[BATCH] Starting file operation: copy
+[BATCH] Source: C:/Users/Rishabh.Sonkar/Downloads/ftpTest
+[BATCH] Base destination: Z:/upload
+[BATCH] Date folder: 2025-10-06
+[BATCH] Final destination: Z:/upload\2025-10-06
+[BATCH] Created destination directory
+[BATCH] Found 13 files to process
+[BATCH] Processed 10 files...
+[BATCH] Success: Copy operation completed to date folder '2025-10-06'
+[BATCH] Processed 13 files in 22.76 seconds
+[BATCH] Log entry created: SUCCESS - Copy operation completed to date folder '2025-10-06'
+[BATCH] Email not configured, skipping notification
+DB connection closed in thread
+Batch operation completed successfully

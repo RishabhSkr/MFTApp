@@ -60,7 +60,7 @@ net use \\172.31.18.136 /delete >nul 2>&1
 net use Z: /delete >nul 2>&1
 
 echo Mapping network share...
-net use Z: \\172.31.18.136\ftp_user1 /user:ftp_user1 dummyPass
+net use Z: \\172.31.18.136 /user:ftp_user1 Welcome@123!
 if errorlevel 1 (
     echo ERROR: Failed to map network drive Z:
     pause
@@ -87,21 +87,12 @@ echo Disconnecting any previous connections...
 net use \\172.31.18.136 /delete >nul 2>&1
 net use Z: /delete >nul 2>&1
 
-echo Mapping network share...
-net use Z: \\172.31.18.136\ftp_user1 /user:ftp_user1 dummyPass
-if errorlevel 1 (
-    echo ERROR: Failed to map network drive Z:
-    pause
-    goto start
-)
-echo Testing batch mode...
-python file_scheduler_persistent.py --batch
-
-echo Disconnecting network share...
-net use Z: /delete
+echo Testing batch mode without pre-mapping the drive...
+echo The script should now handle the drive mapping itself.
+python file_scheduler_persistent.py --batch --config "file_scheduler_config.json"
 
 echo.
-echo Batch test completed
+echo Batch test completed. Check the output above for errors.
 pause
 goto start
 
